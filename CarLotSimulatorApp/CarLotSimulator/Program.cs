@@ -12,19 +12,12 @@ namespace CarLotSimulator
 
             //Now that the Car class is created we can instanciate 3 new cars
 
-            Car car = new Car();
             Car car1 = new Car();
             Car car2 = new Car();
+            Car car3 = new Car();
 
             //Set the properties for each of the cars
 
-            car.Year = "2022";
-            car.Make = "Ford";
-            car.Model = "Mustang";
-            car.EngineNoise = "None";
-            car.HonkNoise = "None";
-            car.IsDriveable = true;
-            CodersCarLot.Cars.Add(car);
 
             car1.Year = "2001";
             car1.Make = "Mitsubishi";
@@ -32,7 +25,7 @@ namespace CarLotSimulator
             car1.EngineNoise = "None";
             car1.HonkNoise = "None";
             car1.IsDriveable = true;
-            CodersCarLot.Cars.Add(car1);
+            CodersCarLot.Add(car1);
 
 
             car2.Year = "1987";
@@ -41,8 +34,15 @@ namespace CarLotSimulator
             car2.EngineNoise = "None";
             car2.HonkNoise = "None";
             car2.IsDriveable = true;
-            CodersCarLot.Cars.Add(car2);
+            CodersCarLot.Add(car2);
 
+            car3.Year = "2022";
+            car3.Make = "Ford";
+            car3.Model = "Mustang";
+            car3.EngineNoise = "None";
+            car3.HonkNoise = "None";
+            car3.IsDriveable = true;
+            CodersCarLot.Add(car3);
 
             //Call each of the methods for each car
 
@@ -52,8 +52,8 @@ namespace CarLotSimulator
             car2.MakeEngineNoise("Bram");
             car2.MakeHonkNoise("Buuga");
 
-            car.MakeEngineNoise("Bap");
-            car.MakeHonkNoise("Beep");
+            car3.MakeEngineNoise("Bap");
+            car3.MakeHonkNoise("Beep");
 
 
             //*************BONUS*************//
@@ -67,12 +67,7 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
-            foreach (var c in CodersCarLot.Cars) 
-            {
-                Console.WriteLine(c);
-                
-            }
-
+            Console.WriteLine(CodersCarLot);
         }
     }
 }
